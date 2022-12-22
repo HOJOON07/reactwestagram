@@ -1,0 +1,106 @@
+@import "../../../styles/variabels.scss";
+
+.storyAndFeed {
+  max-width: 470px;
+  margin-right: 40px;
+
+  .feedContainer {
+    margin-top: 20px;
+    border: 1px solid $grey;
+    border-radius: 10px;
+
+    .profileWrapper {
+      @include optionalFlex(null, center);
+      margin-top: 10px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $grey;
+
+      .userProfileImage {
+        width: 32px;
+        height: 32px;
+      }
+
+      .userAccount {
+        margin-left: 10px;
+      }
+    }
+
+    .responseWrapper {
+      padding: 0 8px;
+      margin-bottom: 8px;
+
+      .feedResponse {
+        @include optionalFlex(null, center);
+
+        .fa-regular {
+          font-size: 22px;
+          margin: 8px;
+        }
+
+        .fa-bookmark {
+          margin-left: 312px;
+        }
+      }
+
+      .likeCounter {
+        margin-left: 10px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .replyWrapper {
+        @include optionalFlex(space-between, null);
+        display: flex;
+        padding: 0 9px;
+        margin-bottom: 10px;
+
+        .userAccount {
+          font-weight: 700;
+        }
+
+        .reply {
+          margin-bottom: 8px;
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        .fa-regular {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .commentWrapper {
+      border-top: 1px solid #ccd0d5;
+
+      .commentForm {
+        display: flex;
+
+        .comment {
+          flex: 10;
+          height: 40px;
+          border-style: none;
+          text-indent: 14px;
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .submitOff {
+          flex: 1;
+          height: 40px;
+          border-style: none;
+          background-color: transparent;
+          color: $light-blue;
+        }
+        .submitOn {
+          @extend .submitOff;
+          color: $dark-blue;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

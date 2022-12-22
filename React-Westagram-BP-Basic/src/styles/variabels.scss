@@ -1,0 +1,12 @@
+$light-blue: #47afff;
+$blue: #0095f6;
+$dark-blue: #0074cc;
+
+$grey: #cccccc;
+$dark-grey: #8e8e8e;
+
+@mixin optionalFlex($justify: "center", $align: "center") {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

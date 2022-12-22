@@ -1,0 +1,57 @@
+@import "../../styles/variabels.scss";
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .loginContainer {
+    padding: 50px;
+    border: 1px solid grey;
+    text-align: center;
+
+    .title {
+      font-family: "Pacifico", cursive;
+      font-size: 50px;
+    }
+    .loginForm {
+      display: flex;
+      flex-direction: column;
+      margin: 80px 0 50px 0;
+      font-size: 15px;
+
+      .userId,
+      .userPassword {
+        width: 350px;
+        margin-bottom: 10px;
+        padding: 10px 0 10px 10px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        background-color: #fafafa;
+        outline: none;
+      }
+
+      .loginButton {
+        padding: 15px 0;
+        background-color: $blue;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        outline: none;
+        opacity: 0.5;
+        cursor: default;
+        &:disabled {
+          background-color: $light-blue;
+        }
+      }
+    }
+    .findPassword {
+      color: darkblue;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}

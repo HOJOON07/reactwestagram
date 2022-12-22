@@ -1,0 +1,85 @@
+@import "../../../styles/variabels.scss";
+
+.accountAndRecommendContainer {
+  margin-top: 50px;
+  .accountWrapper {
+    @include optionalFlex(ceter, center);
+    .userProfileImage {
+      width: 45px;
+      height: 45px;
+    }
+    .infoWrapper {
+      margin-left: 10px;
+      .userAccount {
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .userName {
+        font-size: 14px;
+      }
+    }
+  }
+  .recommendAccountWrapper {
+    .recommendTitle {
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      color: $dark-grey;
+    }
+
+    .accountWrapper {
+      margin-top: 20px;
+
+      .userProfileImage {
+        width: 32px;
+        height: 32px;
+      }
+
+      .infoWrapper {
+        margin-left: 10px;
+
+        .userAccount {
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        .whosConnected {
+          font-size: 12px;
+          color: $dark-grey;
+        }
+      }
+
+      .followToggle {
+        margin-left: 30px;
+        border-style: none;
+        background-color: transparent;
+        font-size: 12px;
+        font-weight: 700;
+        color: $blue;
+      }
+    }
+  }
+  .siteMapWrapper {
+    height: 50px;
+    margin: 30px 5px;
+    word-break: keep-all;
+
+    .siteMapList {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 300px;
+
+      .siteInfoLink {
+        display: flex;
+        margin-bottom: 5px;
+        font-size: 12px;
+        text-decoration: none;
+        color: $dark-grey;
+        &:not(.lastElement)::after {
+          content: "\00B7";
+          margin: 0 2px;
+        }
+      }
+    }
+  }
+}
